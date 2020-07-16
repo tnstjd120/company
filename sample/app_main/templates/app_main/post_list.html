@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'app_main/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django Practice</title>
-</head>
-
-<body>
-    <h1>Django Practice</h1>
-</body>
-
-</html>
+{% block content %}
+{% for post in posts %}
+<div class="post">
+    <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+    <span>{{ post.published_date }}</span>
+    <p>{{ post.text | linebreaksbr}}</p>
+</div>
+{% endfor %}
+{% endblock %}

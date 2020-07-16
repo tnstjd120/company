@@ -1,0 +1,33 @@
+<!--contene-box start-->
+<section class="container-fluid content-wrap px-0 py-0 w-100">
+
+    <ul class="product-wrap px-0">
+        <?php
+        $pik = 'https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/';
+        $json = file_get_contents('./product.json');
+        $list = json_decode($json, true);
+        $list_length = count($list['product']);
+        
+        for($i = 0; $i < $list_length; $i++){
+          $product_i = $list['product'][$i];
+      ?>
+        <li class="row border-bottom py-2 mb-0" data-menu="menu-share">
+            <img class="col-4" src="<?= $product_i['img'] ?>" alt="<?= $product_i['name']; ?>">
+            <div class="col">
+                <h3 class="row product-name text-left py-2 mt-2"><?= $product_i['name']; ?></h3>
+                <h4 class="row mb-0 text-right pr-4">
+                    <span class="col"><?= $product_i['price'] ?>원</span>
+                </h4>
+            </div>
+        </li>
+        <?php
+        }
+      ?>
+    </ul>
+
+    <div id="menu-share" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-load="menu-share.html" data-menu-height="auto" data-menu-effect="menu-over">
+    </div>
+
+</section>
+<!--content-box end-->
+<div class="menu-hider" style=""></div>

@@ -1,13 +1,8 @@
-from django.shortcuts import render, get_object_or_404
-from django.utils import timezone
-from .models import Post
+from django.shortcuts import render, redirect
+from django.views import View
+from django.urls import reverse
 
-# Create your views here.
+class View_Controls(View):
+    def get(self,request):
 
-def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'app_main/post_list.html', {'posts': posts})
-
-def post_detail(request):
-    post = get_object_or_404(Post, pk=pk)
-    return render(request, 'app_main/post_detail.html', {'post': post})
+        return render(request, 'app_main/index.html')

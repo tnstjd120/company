@@ -1,7 +1,6 @@
 from django.urls import path
-from . import views
+from app_main import views
 
 urlpatterns = [
-    path('', views.post_list, name='post_list'),
-    path('post/<int:pk>/', views.post_detail, name='post_detail'),
+    path('',views.View_Controls.as_view(),name="index")
 ]

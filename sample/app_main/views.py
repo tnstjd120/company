@@ -8,16 +8,16 @@ class View_Controls(View):
 
         data = {
             "product":[
-            {"img": "TLLRo8_20200423015341300086.jpg", "name": "쪽파", "price": 150},
-            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015408776257.jpg", "name": "깻잎", "price": 3000},
-            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015431569066.jpg", "name": "양상추", "price": 5000},
-            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015509928747.jpg", "name": "양배추", "price": 6000},
-            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015529053937.jpg", "name": "홍고추", "price": 1000},
-            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015554407678.jpg", "name": "애호박", "price": 8000},
-            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015611523329.jpg", "name": "대파1단", "price": 7000},
-            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015628888902.jpg", "name": "상추300g", "price": 4500},
-            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015705496887.jpg", "name": "상추", "price": 3500},
-            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015740145723.jpg", "name": "감자", "price": 4000}
+            {"img": "TLLRo8_20200423015341300086.jpg", "name": "쪽파", "price": 999000},
+            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015408776257.jpg", "name": "깻잎", "price": 999000},
+            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015431569066.jpg", "name": "양상추", "price": 999000},
+            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015509928747.jpg", "name": "양배추", "price": 999000},
+            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015529053937.jpg", "name": "홍고추", "price": 999000},
+            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015554407678.jpg", "name": "애호박", "price": 999000},
+            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015611523329.jpg", "name": "대파1단", "price": 999000},
+            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015628888902.jpg", "name": "상추300g", "price": 999000},
+            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015705496887.jpg", "name": "상추", "price": 999000},
+            {"img": "https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/TLLRo8_20200423015740145723.jpg", "name": "감자", "price": 999000}
             ]
         }
 

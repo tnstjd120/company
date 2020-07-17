@@ -6251,6 +6251,14 @@ body {
     font-size: 3vw;
   }
   
+  .cart{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1024;
+
+  }
+
   .cart-count{
     position: absolute;
     background: #fb7b0c;
@@ -6276,6 +6284,9 @@ body {
     margin-bottom: 15vw;
   }
   .product-price{
+    font-size: 5vw;
+  }
+  .product-count{
     font-size: 5vw;
   }
   
@@ -6321,6 +6332,6 @@ body {
   margin-left: 0 !important;
 }
 
-  .count-wrap label, .count-wrap span{
-    font-size: 5vw;
-  }
+.count-wrap label, .count-wrap span{
+  font-size: 5vw;
+}

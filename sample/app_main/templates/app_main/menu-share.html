@@ -37,7 +37,7 @@
 <div class="container-fluid product-modal d-flex flex-column align-items-center pt-4 px-0">
   <!-- image -->
   <div class="row">
-    <img src="{{img}}" alt="{{name}}">
+    <img src="{{img}}" alt="{{name}}" onerror="this.style.display='none';">
   </div>
 
   <!-- price-name -->
@@ -49,24 +49,25 @@
 
   <!-- price-count -->
   <div class="row mb-2">
-    <form action="" method="">
-      <div class="form-group">
-        <button class="minus mr-3 border" type="button">
-          <i class="fas fa-minus"></i>
-        </button>
+    <button class="minus mr-3 border col" type="button">
+      <i class="fas fa-minus fa-3x"></i>
+    </button>
 
-        <input type="text" class="form-control-inline border text-right" value="1">
+    <p class="product-count col">
+      999
+    </p>
 
-        <button class="plus ml-3 border" type="button">
-          <i class="fas fa-plus"></i>
-        </button>
-      </div>
-    </form>
+    <button class="plus ml-3 border col" type="button">
+      <i class="fas fa-plus fa-3x"></i>
+    </button>
   </div>
 
-  <div class="row mb-0">
-    <p class="modal-price">
-      총 가격 {{price | intcomma}} 원
+  <div class="row w-100 mb-0 text-center product-price">
+    <p class="col-5">
+      총 가격
+    </p>
+    <p class="col">
+      {{price | intcomma}}
     </p>
   </div>
 

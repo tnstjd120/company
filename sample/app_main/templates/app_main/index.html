@@ -1,6 +1,6 @@
 {% extends 'app_main/base.html' %}
 {% load static %}
-
+{% load humanize %}
 {% block header %}
 <!--header start-->
 <div id="header-wrap" class="carousel slide" data-ride="carousel">
@@ -10,7 +10,7 @@
             <img class="d-block w-100" src="https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/20200401223328523859.jpg" alt="img01">
 
             <div class="img-txt pt-3">
-                <h3>이요마트</h3>
+                <h3 class="text-white">이요마트</h3>
                 <p class="my-0">주문 가능시간 <span>24시간</span></p>
                 <p>최소 주문금액 <span>30,000</span></p>
             </div>
@@ -88,51 +88,37 @@
 </div>
 <!--category end-->
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script>
-    // $('.carousel').carousel({interval: 1500});
-</script>
+
 {% endblock %}
 <!-- header end -->
 
 {% block content%}
-
 <!--contene-box start-->
 <section class="container-fluid content-wrap px-0 py-0 w-100">
 
-    <ul class="product-wrap px-0">
-        <?php
-        $pik = 'https://s3.ap-northeast-2.amazonaws.com/image.gawooplus.com/eeyo/';
-        $json = file_get_contents('./product.json');
-        $list = json_decode($json, true);
-        $list_length = count($list['product']);
-        
-        for($i = 0; $i < $list_length; $i++){
-          $product_i = $list['product'][$i];
-      ?>
-        <li class="row border-bottom py-2 mb-0" data-menu="menu-share">
-            <img class="col-4" src="<?= $product_i['img'] ?>" alt="<?= $product_i['name']; ?>">
-            <div class="col">
-                <h3 class="row product-name text-left py-2 mt-2"><?= $product_i['name']; ?></h3>
-                <h4 class="row mb-0 text-right pr-4">
-                    <span class="col"><?= $product_i['price'] ?>원</span>
-                </h4>
+    <ul class="product-wrap px-0 bg-white">
+        {% for item in product_data.product %}
+        <li class="row border-bottom py-2 mb-0 d-flex justify-content-center" data-menu="menu-{{ item.name }}">
+            <img class="col-4 pr-0" src="{{ item.img }}" alt="{{ item.name }}" onerror="this.style.display='none';">
+
+            <div class="col d-flex flex-column">
+                <h3 class="row product-name text-left mt-2 pl-4 mb-auto pb-5">
+                    <span class="col">{{ item.name }}</span>
+                </h3>
+                <p class="row mb-0 text-right pr-4 product-price">
+                    <span class="col">{{ item.price|intcomma }}원</span>
+                </p>
             </div>
         </li>
-        <?php
-        }
-      ?>
+        <div id="menu-{{ item.name }}" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-load="{%url 'test' %}?name={{ item.name }}&img={{item.img}}&price={{item.price}}" data-menu-height="auto" data-menu-effect="menu-over">
+        </div>
+        {% endfor %}
     </ul>
 
-    <div id="menu-share" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-load="menu-share.html" data-menu-height="auto" data-menu-effect="menu-over">
-    </div>
 
 </section>
 <!--content-box end-->
 <div class="menu-hider" style=""></div>
-
 {% endblock %}
 <!-- content end -->
 
@@ -142,34 +128,33 @@
     <ul class="row w-100 px-1 py-2 mx-0 mb-0">
 
         <li class="col-3">
-            <a href="index.php">
-                <img src="{% static 'images/footer-icon/info.png' %}" alt="주문하기" onmouseover="this.src='{% static "images/footer-icon/info.png" %}'" onmouseout="this.src='./images/footer-icon/info.png'">
+            <a href=" /">
+                <img src="{% static 'images/footer-icon/info.png' %}" alt="주문하기" onmouseover="this.src='{% static "images/footer-icon/info_select.png" %}'" onmouseout="this.src='{% static "images/footer-icon/info.png" %}'">
             </a>
             <div class="footer-txt text-muted">주문하기</div>
         </li>
 
         <li class="col-3">
             <a href="#none">
-                <img src="./images/footer-icon/leaflet.png" alt="전단지">
+                <img src="{% static 'images/footer-icon/leaflet.png' %}" alt="전단지">
             </a>
             <div class="footer-txt text-muted">전단지</div>
         </li>
 
         <li class="col-3">
             <a href="#none">
-                <img src="./images/footer-icon/message.png" alt="메세지">
+                <img src="{% static 'images/footer-icon/message.png' %}" alt="메세지">
             </a>
             <div class="footer-txt text-muted">메세지</div>
         </li>
 
         <li class="col-3">
             <a href="#none">
-                <img src="./images/footer-icon/order.png" alt="장바구니">
+                <img src="{% static 'images/footer-icon/order.png' %}" alt="장바구니">
             </a>
             <div class="footer-txt text-muted">장바구니</div>
             <div class="cart-count">0</div>
         </li>
-
     </ul>
 
 </div>

@@ -6275,6 +6275,9 @@ body {
   .product-wrap{
     margin-bottom: 15vw;
   }
+  .product-price{
+    font-size: 5vw;
+  }
   
   .close-menu{
     position: absolute;
@@ -6284,16 +6287,40 @@ body {
   }
   
   .product-modal img{
-    height: 41vw;
+
+    /* height: 41vw;
     width: 35vw;
     max-height: 150px;
-    max-width: 200px;
+    max-width: 200px; */
   }
   
-  .product-modal div:nth-child(2){
-    max-height: 160px
+  .minus{
+    color: #dc3545;
   }
-  
+
+  .plus{
+    color: #007bff;
+  }
+
+  .minus, .plus{
+    border-radius: 50%;
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px 10px;
+  }
+
+.modal-price{
+  font-size: 5vw
+}
+
+.btn-wrap{
+  height: 20vw;
+}
+
+.btn-wrap button:last-child{
+  margin-left: 0 !important;
+}
+
   .count-wrap label, .count-wrap span{
     font-size: 5vw;
   }

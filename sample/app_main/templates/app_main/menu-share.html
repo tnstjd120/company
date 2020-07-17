@@ -1,0 +1,79 @@
+{% load humanize %}
+<!-- <div class="container-fluid product-modal px-0 mt-3">
+
+  <div class="row mb-2">
+
+    <h2 class="col pl-4">{{name}}</h2>
+
+    <a href="#" class="close-menu"><i class="fas fa-times fa-2x"></i></a>
+  </div>
+
+  <div class="row mb-3">
+    <img class="col-6" src="{{img}}" alt="쪽파">
+
+    <div class="col">
+      <div class="row mt-3 mb-5 pb-3 form-group count-wrap">
+        <label class="col-3 px-0 pr-1" for="product-count">수량</label>
+        <input type="text" id="product-count" class="col-6 form-control text-right" value="1">
+        <span class="col-3 px-1">개</span>
+      </div>
+      <h4 class="row text-right pr-4">
+        <span class="col pr-3">{{price}}원</span>
+      </h4>
+    </div>
+  </div>
+
+  <div class=" row">
+    <div class="col d-flex justify-content-around">
+      <button class="btn btn-primary">
+        장바구니에 담기
+      </button>
+      <button class="btn btn-danger">
+        구매하기
+      </button>
+    </div>
+  </div> -->
+
+<div class="container-fluid product-modal d-flex flex-column align-items-center pt-4 px-0">
+  <!-- image -->
+  <div class="row">
+    <img src="{{img}}" alt="{{name}}">
+  </div>
+
+  <!-- price-name -->
+  <div class="row">
+    <h3 class="col">
+      <span>{{name}}</span>
+    </h3>
+  </div>
+
+  <!-- price-count -->
+  <div class="row mb-2">
+    <form action="" method="">
+      <div class="form-group">
+        <button class="minus mr-3 border" type="button">
+          <i class="fas fa-minus"></i>
+        </button>
+
+        <input type="text" class="form-control-inline border text-right" value="1">
+
+        <button class="plus ml-3 border" type="button">
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="row mb-0">
+    <p class="modal-price">
+      총 가격 {{price | intcomma}} 원
+    </p>
+  </div>
+
+  <!-- button -->
+  <div class="row btn-group mb-0 w-100 btn-wrap">
+    <button class="btn btn-primary col-8" type="butoon">장바구니 담기</button>
+    <button class="btn btn-danger col-4" type="butoon">닫기</button>
+  </div>
+
+</div>

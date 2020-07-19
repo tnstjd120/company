@@ -1544,4 +1544,4 @@ $(document).ready(function () {
         function loadPWA() { }
         loadJS('static/scripts/pwa.js', loadPWA, document.body);
     }
-}); 
+});

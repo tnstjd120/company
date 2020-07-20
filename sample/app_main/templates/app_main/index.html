@@ -110,7 +110,7 @@
     <div class="quick">
         <div class="call">
             <a href="tel:010-5029-0087">
-                <i class="fas fa-phone"></i>
+                <img src="{% static 'images/footer-icon/phone.png' %}" alt="전화" onmouseover="this.src='{% static "images/footer-icon/phone_select.png" %}'" onmouseout="this.src='{% static "images/footer-icon/phone.png" %}'">
             </a>
         </div>
         <div class="cart">
@@ -126,33 +126,31 @@
     <ul class="row w-100 px-1 py-2 mx-0 mb-0">
         <li class="col event">
             <a href="#none">
-                <!-- <img src="{% static 'images/footer-icon/leaflet.png' %}" alt="이벤트상품"> -->
-                <i class="fas fa-gift"></i>
+                <img src="{% static 'images/footer-icon/gift.png' %}" alt="이벤트상품" onmouseover="this.src='{% static "images/footer-icon/gift_select.png" %}'" onmouseout="this.src='{% static "images/footer-icon/gift.png" %}'">
             </a>
             <div class="footer-txt text-muted">이벤트<br>상품</div>
         </li>
         <li class="col leaflet">
             <a href="#none">
-                <img src="{% static 'images/footer-icon/leaflet.png' %}" alt="스마트전단지">
+                <img src="{% static 'images/footer-icon/leaflet.png' %}" alt="스마트전단지" onmouseover="this.src='{% static "images/footer-icon/leaflet_select.png" %}'" onmouseout="this.src='{% static "images/footer-icon/leaflet.png" %}'">
             </a>
             <div class="footer-txt text-muted">스마트<br>전단지</div>
         </li>
         <li class="col info">
-            <a href=" /">
+            <a href="/">
                 <img src="{% static 'images/footer-icon/info.png' %}" alt="주문하기" onmouseover="this.src='{% static "images/footer-icon/info_select.png" %}'" onmouseout="this.src='{% static "images/footer-icon/info.png" %}'">
             </a>
             <div class="footer-txt text-muted">주문하기</div>
         </li>
         <li class="col message">
             <a href="#none">
-                <img src="{% static 'images/footer-icon/message.png' %}" alt="메세지">
+                <img src="{% static 'images/footer-icon/message.png' %}" alt="메세지" onmouseover="this.src='{% static "images/footer-icon/message_select.png" %}'" onmouseout="this.src='{% static "images/footer-icon/message.png" %}'">
             </a>
             <div class="footer-txt text-muted">메세지</div>
         </li>
         <li class="col mypage">
             <a href="#none">
-                <i class="far fa-user"></i>
-                <!-- <img src="{% static 'images/footer-icon/message.png' %}" alt="내정보"> -->
+                <img src="{% static 'images/footer-icon/mypage.png' %}" alt="내정보" onmouseover="this.src='{% static "images/footer-icon/mypage_select.png" %}'" onmouseout="this.src='{% static "images/footer-icon/mypage.png" %}'">
             </a>
             <div class="footer-txt text-muted">내정보</div>
         </li>

@@ -56,13 +56,62 @@
 
 
     <p class="col product-count">
-      999
+      1
+
+      <!-- <input type="text" value="1" id="productCount" class="w-25 border-0 text-center bg-white" disabled> -->
     </p>
 
 
-    <button class="plus border mr-4" type="button">
+    <button class="plus border mr-4" type="button" onclick="">
       <i class="fas fa-plus"></i>
     </button>
+    <script>
+      // $(function () {
+      //   $('.minus').click(function (e) {
+      //     e.preventDefault();
+      //     var stat = $('.product-count').text();
+      //     var num = parseInt(stat, 10);
+      //     num--;
+      //     if (num <= 0) {
+      //       alert('더이상 줄일수 없습니다.');
+      //       num = 1;
+      //     }
+      //     $('.product-count').text(num);
+      //   });
+      //   $('.plus').click(function (e) {
+      //     e.preventDefault();
+      //     var stat = $('.product-count').text();
+      //     var num = parseInt(stat, 10);
+      //     num++;
+
+      //     if (num > 999) {
+      //       alert('더이상 늘릴수 없습니다.');
+      //       num = 999;
+      //     }
+      //     $('.product-count').text(num);
+      //   });
+      // });
+
+      // $(function () {
+      //   $('.plus').click(function (e) {
+      //     e.preventDefault();
+      //     var count = $('.product-count').text();
+      //     var countInt = parseInt(count, 10);
+      //     countInt++;
+      //     if (countInt > 999) {
+      //       alert('더이상 추가할 수 없습니다.');
+      //       countInt = 999;
+      //     }
+      //     $('.product-count').text(countInt);
+      //   });
+      // })
+
+      // function productAdd(e) {
+      //   var count = document.getElementById('count').value();
+
+      //   console.log(count++);
+      // }
+    </script>
 
   </div>
 
@@ -83,23 +132,28 @@
 
 </div>
 <script>
-  $(document).ready(function () {
-    $(".plus").click(function () {
-      var $this = $(this);
-      var target = $this.parent('.product-count');
-      var num = parseInt(target.text());
-      num++;
+  // $(document).ready(function () {
+  //   $(".plus").click(function () {
+  //     var $this = $(this);
+  //     var target = $this.parent('.product-count');
+  //     var num = parseInt(target.text());
+  //     num++;
 
-      target.text(num);
-    });
+  //     target.text(num);
+  //   });
 
-    $(".minus").click(function () {
-      var $this = $(this);
-      var target = $this.parent('.product-count');
-      var num = parseInt(target.text());
-      num -= ((num === 1) ? 0 : 1); //1이하로는 못내려가게 한다 
+  //   $(".minus").click(function () {
+  //     var $this = $(this);
+  //     var target = $this.parent('.product-count');
+  //     var num = parseInt(target.text());
+  //     num -= ((num === 1) ? 0 : 1); //1이하로는 못내려가게 한다 
 
-      target.text(num);
-    });
-  })
+  //     target.text(num);
+  //   });s
+  // })
+
+  // var count = $('.product-count').text();
+  // var count = document.getElementById('count').innerText;
+  // alert(count);
+
 </script>

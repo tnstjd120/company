@@ -1545,27 +1545,13 @@ $(document).ready(function () {
         loadJS('static/scripts/pwa.js', loadPWA, document.body);
     }
 
-    // sum-price
-    $(".plus").click(function () {
-        var $this = $(this);
-        var target = $this.prev();
-        var num = parseInt(target.text());
-        num++;
-
-        target.text(num);
+    $('.cart').mouseenter(function () {
+        $('.cart-count').addClass('cart-count-hov');
     });
-
-    $(".minus").click(function () {
-        var $this = $(this);
-        var target = $this.next();
-        var num = parseInt(target.text());
-        num -= ((num === 1) ? 0 : 1); //1이하로는 못내려가게 한다 
-
-        target.text(num);
-    });
-
-
-
+    $('.cart').mouseleave(function () {
+        $('.cart-count').removeClass('cart-count-hov');
+    })
 });
+
 
 

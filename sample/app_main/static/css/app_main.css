@@ -6307,8 +6307,8 @@ body {
     right: 0.8rem;
     bottom: 0.6rem;
     z-index: 1024;
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
   }
 
@@ -6337,11 +6337,16 @@ body {
     width: 1.3rem;
     height: 1.3rem;
     border-radius: 50%;
-    transform: translate(1.5rem, -2.4rem);
+    transform: translate(1.3rem, -2.5rem);
     font-size: 0.8rem;
-    line-height: 1rem;
+    line-height: 1.3rem;
     text-align: center;
-    border: 2px solid #fb7b0c;
+    border: 1px solid #fb7b0c;
+  }
+
+  .cart-count-hov{
+    color: #fff !important;
+    background: #fb7b0c !important;
   }
 
   .cart a{
@@ -6378,10 +6383,11 @@ body {
     letter-spacing: 0.1em;
   }
 
-  .product-count{
+  .product-count input[type="text"]{
     font-family: "PT Serif", serif;
-    font-size: 2rem;
-    line-height: 5rem;
+    font-size: 2rem !important;
+    line-height: 5rem !important;
+    height: auto !important;
     letter-spacing: 0.1em;
   }
 

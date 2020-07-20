@@ -6223,6 +6223,7 @@ body {
   }
   .scroll-menu a{
     color: #333 !important;
+    font-weight: 600 !important;
   }
   
   .list-wrap{

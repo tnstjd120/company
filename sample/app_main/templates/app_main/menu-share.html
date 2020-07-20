@@ -49,28 +49,28 @@
 
   <!-- price-count -->
   <div class="row mb-4 w-100 text-center">
-    <div class="col">
-      <button class="minus border" type="button">
-        <i class="fas fa-minus"></i>
-      </button>
-    </div>
+
+    <button class="minus border ml-4" type="button">
+      <i class="fas fa-minus"></i>
+    </button>
+
 
     <p class="col product-count">
       999
     </p>
 
-    <div class="col">
-      <button class="plus border" type="button">
-        <i class="fas fa-plus"></i>
-      </button>
-    </div>
+
+    <button class="plus border mr-4" type="button">
+      <i class="fas fa-plus"></i>
+    </button>
+
   </div>
 
   <div class="row w-100 mb-0 text-center product-price">
     <p class="col-5">
       총 가격
     </p>
-    <p class="col">
+    <p class="col sum-price">
       {{price | intcomma}}
     </p>
   </div>
@@ -82,3 +82,24 @@
   </div>
 
 </div>
+<script>
+  $(document).ready(function () {
+    $(".plus").click(function () {
+      var $this = $(this);
+      var target = $this.parent('.product-count');
+      var num = parseInt(target.text());
+      num++;
+
+      target.text(num);
+    });
+
+    $(".minus").click(function () {
+      var $this = $(this);
+      var target = $this.parent('.product-count');
+      var num = parseInt(target.text());
+      num -= ((num === 1) ? 0 : 1); //1이하로는 못내려가게 한다 
+
+      target.text(num);
+    });
+  })
+</script>

@@ -1544,4 +1544,28 @@ $(document).ready(function () {
         function loadPWA() { }
         loadJS('static/scripts/pwa.js', loadPWA, document.body);
     }
+
+    // sum-price
+    $(".plus").click(function () {
+        var $this = $(this);
+        var target = $this.prev();
+        var num = parseInt(target.text());
+        num++;
+
+        target.text(num);
+    });
+
+    $(".minus").click(function () {
+        var $this = $(this);
+        var target = $this.next();
+        var num = parseInt(target.text());
+        num -= ((num === 1) ? 0 : 1); //1이하로는 못내려가게 한다 
+
+        target.text(num);
+    });
+
+
+
 });
+
+

@@ -15,26 +15,42 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'icons/icon-192x192.png' %}">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 </head>
 
 <body class="theme-light" data-highlight="blue2">
-
+    <!-- header -->
     {% block header %}
     {% endblock %}
-    <!-- header end-->
 
+    <!-- content -->
     {% block content %}
     {% endblock %}
-    <!-- content end-->
 
+    <!-- footer -->
     {% block footer %}
     {% endblock %}
-    <!-- footer end -->
 
     <script type="text/javascript" src="{% static 'scripts/jquery.js' %}"></script>
     <script type="text/javascript" src="{% static 'scripts/bootstrap.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'scripts/custom.js' %}"></script>
+    <script>
+        // var pc_device = "win16|win32|win64|mac|macintel";
+
+        // var this_device = navigator.platform;
+
+        // if (this_device) {
+
+        //     if (pc_device.indexOf(navigator.platform.toLowerCase()) < 0) {
+        //         console.log('MOBILE');
+        //         alert('mobile');
+        //     } else {
+        //         console.log('PC');
+
+        //     }
+        // };
+    </script>
 
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
